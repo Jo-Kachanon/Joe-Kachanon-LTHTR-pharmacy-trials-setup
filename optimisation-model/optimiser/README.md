@@ -45,6 +45,7 @@ bind on a larger caseload.
 | `diagnostics.py` | The pre-solve P1 ceiling and the post-solve report |
 | `service.py` | JSON in, JSON out, in the planner's own field names |
 | `cli.py` | Command line entry point |
+| `plan_sim.py` | Monte Carlo simulation of a committed plan under duration uncertainty. See `SIMULATION.md` |
 
 ## Formulation
 
