@@ -4,21 +4,19 @@ Final deliverables for the dissertation on pharmacy set-up capacity for clinical
 Lancashire Teaching Hospitals (LTHTR), supporting the UK Government's 150-day trial
 set-up target.
 
-Curated from the working research repository into four self-contained parts:
+Curated from the working research repository into five self-contained parts:
 
 | Folder | Contents |
 |---|---|
-| `dissertation/` | The thesis chapters (Markdown source of truth), the Overleaf/LaTeX build, and figures |
+| `dissertation/` | The final dissertation PDF |
 | `optimisation-model/` | The Python selection model (Gurobi), its automated tests, and supporting analysis notes |
 | `ui-prototype/` | Standalone HTML prototype of the pharmacy planner interface |
 | `presentation/` | Results presentation slides |
+| `flowchart/` | Pharmacy pathway process diagrams |
 
 ## Dissertation
 
-`dissertation/` holds the six chapters as Markdown (the source of truth) plus
-`dissertation/latex/`, the Overleaf project they are rendered into for the final PDF.
-See `dissertation/latex/README.md` for build instructions (pdfLaTeX) and the chapter/appendix
-mapping.
+`dissertation/14287892_BMAN73250.pdf` is the final dissertation.
 
 ## Optimisation model
 
@@ -35,6 +33,11 @@ prototype of the planner interface — open it directly in a browser.
 ## Presentation
 
 `presentation/LTHTR_Results_Presentation.pptx` is the results presentation deck.
+
+## Flowchart
+
+`flowchart/` holds the pharmacy pathway process diagrams: the CT-Excel field mapping for
+150-day Stage 2, and the interactive pharmacy pathway HTML.
 
 ## Provenance
 
