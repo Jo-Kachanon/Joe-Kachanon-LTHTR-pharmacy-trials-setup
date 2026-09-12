@@ -1,0 +1,117 @@
+% Chapter 3, Problem Description.
+% Generated from Dissertation/Chapter3_Problem_Description.md by tools/md2tex.py.
+%% The draft-status line, the provenance notes and the [edit] markers in the
+%% Markdown source are not part of the submitted text and are absent here.
+%% Markdown is the source. Regenerate this file when it changes; do not hand-edit.
+
+\chapter{Problem Description}
+\label{ch:problem}
+\lhead{Chapter 3. \emph{Problem Description}}
+
+\section{The problem in practice}
+\label{sec:inpractice}
+
+From 2024 to 2026, only 3 of 24 trials met the 60-day window on the available C\&C Agreement proxy measure; the median interval was 144 days. Pharmacy completed review within 60 days in 2 of 23 trials with usable pharmacy data.
+
+Volume alone does not explain this. LTHTR typically brings 12--15 CTIMPs into set-up each year, counting non-commercial trials because they draw on the same teams even though only commercial ones fall under the target. The clinical trials team's service-level agreement allows two commercial trials a month, or about 24 annually. This suggests that its capacity is not fully used.
+
+The specialist units have no agreed capacity. Around 60\% of open trials require aseptic work and therefore queue for the same small unit, which must operate below 80\% utilisation under its manufacturing licence. Oncology prefers to handle one trial at a time and slows when several run concurrently. These limits do not mean that work is refused: clinical trials account for only about 2\% of Aseptic Services' weekly workload. However, the trust has not measured how many trials either unit can manage concurrently. Progress therefore depends on when the relevant team reaches a trial, rather than on whether it has overall capacity.
+
+No formal rule allocates this scarce team time. Trials are generally taken in arrival order. Pharmacy may expedite a study it considers important outside the usual review timeline, but these decisions are informal and unrecorded. Consequently, a trial's completion date depends partly on the work that arrived before it, rather than solely on its own requirements. The model does not assign trials a value score or exclude them on perceived importance. All trials within scope are therefore treated as equally worthwhile; the decision is which trials can be committed while maximising on-time completion and then minimising weighted lateness.
+
+Two linked decisions are therefore made without a supporting method. The first is which waiting trials pharmacy starts. The second is the order in which the teams complete the work once it has started. Neither decision is recorded or reviewed, although together they shape whether pharmacy completes work within its 60-day target.
+
+\section{Scope and boundaries}
+\label{sec:scope}
+
+The exclusions in Section~\ref{sec:objective} apply throughout, but for different reasons. Capacity is fixed: the model asks what existing staff can achieve, rather than how many staff each team should have.
+
+Clinical site set-up is not modelled. This work, undertaken by the research delivery team, includes activities such as staff training and site initiation and is separate from the pharmacy clinical trials function modelled here. The trust records neither its start nor end date, so its duration cannot be estimated from the available data.
+
+Governance is also excluded. The tracker shows when governance finished but not when it started, so its length cannot be worked out, and governance committees impose fixed calendar delays rather than claims on pharmacy capacity: they may block completion but do not alter the pharmacy effort a trial requires. Committee requirements are therefore recorded outside the optimisation model.
+
+\section{Sets, parameters and variables}
+\label{sec:sets}
+
+Let $i \in I$ denote a trial waiting for set-up and $E$ the eligible queue, the trials in $I$ falling inside the scope of Section~\ref{sec:scope}. Appendix~\ref{app:notation} tabulates every symbol.
+
+Each trial follows one of four set-up pathways, fixed by whether it needs sterile preparation and whether an electronic prescription must be built. The pathway sets the trial's set-up duration $p_i$ in days, and records what a trial requires rather than which team supplies it.
+
+The 60-day window is fixed by the 150-day Stage 2 definition. It opens on the later of regulatory approval and site selection, and the site must be confirmed before it closes, so trial $i$ carries a due day:
+
+\begin{equation}
+  due_i = \max(\mathrm{approval}_i, \mathrm{selection}_i) + G, \qquad G = 60
+  \label{eq:dueday}
+\end{equation}
+
+Against a planning date, $\delta_i$ is the days remaining to $due_i$, negative once the due day has passed.
+
+\begin{equation}
+  w_i = 1 + a_i / D, \qquad D = 365
+  \label{eq:weight}
+\end{equation}
+
+A trial waiting a year is twice as expensive to defer as one that has just arrived. This is what stops slow trials being starved by faster ones.
+
+Two decision variables carry the plan: $x_i = 1$ if trial $i$ is committed this cycle and $0$ if deferred, and $d^+_i \ge 0$ records the days by which it finishes past its due day, with a binary $\mathrm{onTime}_i$ marking a committed trial that still lands inside the window.
+
+\section{The approval queue}
+\label{sec:queue}
+
+Final approval is represented as a shared, load-dependent single-server queue. This is a conservative approximation of a process normally centred on one lead approver: delegation can shorten, but not increase, the modelled delay. Let $g_n$ denote the expected approval delay when $n$ trials are committed.
+
+On-time performance is a property of the plan, not of an individual trial: approval delay depends on how many trials are committed, so the same trial may be feasible in a smaller plan and late in a larger one. A trial meets its deadline only when its set-up duration and the approval delay together fit inside its remaining time, and whether they do cannot be assessed until the plan is chosen.
+
+The formulation represents the number of trials committed by the plan explicitly. Let $z_n = 1$ if the plan commits exactly $n$ trials and $0$ otherwise:
+
+\begin{equation}
+  \sum_n z_n = 1, \qquad \sum_{i \in E} x_i = \sum_n n\, z_n, \qquad \sum_{i \in E} x_i \le c
+  \label{eq:loadselector}
+\end{equation}
+
+Here $c$ is the maximum number of trials the service may commit in one cycle, so the constraints select one plan size, equate it to the number committed, and cap that number.
+
+Let $r_{in} = 1$ if trial $i$ would finish inside its window when $n$ trials are committed, that is if $p_i + g_n \le \delta_i$. A trial counts as on time only when it is selected and can meet its deadline at the chosen plan size:
+
+\begin{equation}
+  \mathrm{onTime}_i \le x_i, \qquad \mathrm{onTime}_i \le \sum_n r_{in}\, z_n
+  \label{eq:ontime}
+\end{equation}
+
+\section{The selection model}
+\label{sec:model}
+
+\textbf{The model is a pre-emptive goal programme.} Two goals are stated in strict priority order, and a lower priority is optimised only within the value already fixed above it, because the trust has no basis for an exchange rate between them. A deferred trial receives a further planning cycle of lateness, so deferral cannot remove it from consideration, and weighted lateness is summed across the whole eligible queue rather than the committed trials alone, which prevents the model from improving its result by selecting only easy cases. Appendix~\ref{app:notation} gives the goal-programming notation, the equivalence between minimising $n_1^-$ and maximising the on-time count, and a worked instance.
+
+\textbf{The order is on-time completion first, then lateness.} The second is used only to separate plans that tie on the first. Lateness is set out below because both goals are written against it, but it is the lower of the two.
+
+\textbf{The lateness measure.} It is written as a goal rather than measured after a plan is chosen, so that deferring a trial carries an explicit cost. A committed trial finishes late by its set-up duration and queue wait, less its remaining time; a deferred trial waits a further planning cycle of $L$ days:
+
+\begin{equation}
+  d^+_i \;\ge\; (p_i - \delta_i) + \sum_n g_n z_n + L\,(1 - x_i), \qquad d^+_i \ge 0
+  \label{eq:lateness}
+\end{equation}
+
+\textbf{The other goal is on-time completion.} Its target is that every eligible trial finishes inside its window, and it carries an under-achievement:
+
+\begin{equation}
+  \sum_{i \in E} \mathrm{onTime}_i + n_1^- = |E|, \qquad n_1^- \ge 0
+  \label{eq:ontimecount}
+\end{equation}
+
+\textbf{The two deviations are then minimised lexicographically:}
+
+\begin{equation}
+  \text{Lex min}\;\left\{\; \underbrace{n_1^-}_{\text{P1}},\;\; \underbrace{\sum_{i \in E} w_i\, d^+_i}_{\text{P2}} \;\right\}
+  \label{eq:objectives}
+\end{equation}
+
+\textbf{P1 is the measure the trust is assessed on}, the number of trials completed on time; \textbf{P2 separates plans achieving the same P1}, and because it sums weighted lateness across the whole eligible queue it selects the plan leaving the least weighted lateness behind.
+
+\section{What the model does not decide}
+\label{sec:notdecided}
+
+The model decides which trials to commit in a cycle. It does not decide the order in which those trials are worked, or which team handles each trial on a given day. It commits a set and reports what that set achieves. Ordering is handled through the queue wait $g_n$: the model represents the congestion that a detailed schedule would otherwise resolve, which keeps the problem linear and avoids per-team timings the trust does not record.
+
+---
+

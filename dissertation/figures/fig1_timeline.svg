@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" font-family="Inter, Arial, sans-serif">
+  <rect x="0" y="0" width="1000" height="500" fill="#FFFFFF"></rect>
+
+  <g stroke="#EFECF4" stroke-width="1">
+    <line x1="242" y1="120" x2="242" y2="392"></line>
+    <line x1="414" y1="120" x2="414" y2="392"></line>
+    <line x1="586" y1="120" x2="586" y2="392"></line>
+    <line x1="758" y1="120" x2="758" y2="392"></line>
+    <line x1="930" y1="120" x2="930" y2="392"></line>
+  </g>
+
+  <text x="70" y="110" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4" fill="#6B5B7E">150-DAY STUDY-LEVEL TARGET</text>
+
+  <rect x="70" y="128" width="344" height="72" fill="#ECE9F1" stroke="#C7BFD4" stroke-width="1"></rect>
+  <text x="242" y="153" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1F0E33">Stage 1</text>
+  <text x="242" y="173" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1F0E33">60 days</text>
+  <text x="242" y="191" text-anchor="middle" font-size="10.5" fill="#6B5B7E">Regulatory and ethics review decision</text>
+
+  <rect x="414" y="128" width="344" height="72" fill="#ECE9F1" stroke="#C7BFD4" stroke-width="1"></rect>
+  <text x="586" y="153" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1F0E33">Stage 2</text>
+  <text x="586" y="173" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1F0E33">60 days</text>
+  <text x="586" y="191" text-anchor="middle" font-size="10.5" fill="#6B5B7E">Decision to study opening</text>
+
+  <rect x="758" y="128" width="172" height="72" fill="#ECE9F1" stroke="#C7BFD4" stroke-width="1"></rect>
+  <text x="844" y="153" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1F0E33">Stage 3</text>
+  <text x="844" y="173" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1F0E33">30 days</text>
+  <text x="844" y="191" text-anchor="middle" font-size="10" fill="#6B5B7E">Opening to first participant</text>
+
+  <g stroke="#9D8FB0" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="414" y1="200" x2="414" y2="272"></line>
+    <line x1="930" y1="200" x2="930" y2="272"></line>
+  </g>
+  <text x="672" y="234" text-anchor="middle" font-size="10.5" font-style="italic" fill="#6B5B7E">The 90 days covers these last two stages; it does not restart at the beginning.</text>
+
+  <text x="70" y="254" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.4" fill="#6B5B7E">90-DAY SITE-LEVEL EXPECTATION</text>
+
+  <line x1="74" y1="308" x2="410" y2="308" stroke="#C7BFD4" stroke-width="1" stroke-dasharray="2 5"></line>
+  <text x="242" y="304" text-anchor="middle" font-size="10" font-style="italic" fill="#9D8FB0">Site track not yet under way</text>
+
+  <rect x="414" y="272" width="344" height="72" fill="#50017D"></rect>
+  <text x="586" y="297" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.2" fill="#E9D9F5">EXAMINED IN THIS DISSERTATION</text>
+  <text x="586" y="318" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">60 days</text>
+  <text x="586" y="334" text-anchor="middle" font-size="9" fill="#E9D9F5">From the later of regulatory approval or site selection, to site opening</text>
+
+  <rect x="758" y="272" width="172" height="72" fill="#ECE9F1" stroke="#C7BFD4" stroke-width="1"></rect>
+  <text x="844" y="303" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1F0E33">30 days</text>
+  <text x="844" y="321" text-anchor="middle" font-size="10" fill="#6B5B7E">Opening to first</text>
+  <text x="844" y="334" text-anchor="middle" font-size="10" fill="#6B5B7E">participant</text>
+
+  <line x1="70" y1="392" x2="930" y2="392" stroke="#9D8FB0" stroke-width="1"></line>
+  <g stroke="#9D8FB0" stroke-width="1">
+    <line x1="70" y1="392" x2="70" y2="399"></line>
+    <line x1="242" y1="392" x2="242" y2="399"></line>
+    <line x1="414" y1="392" x2="414" y2="399"></line>
+    <line x1="586" y1="392" x2="586" y2="399"></line>
+    <line x1="758" y1="392" x2="758" y2="399"></line>
+    <line x1="930" y1="392" x2="930" y2="399"></line>
+  </g>
+  <g font-size="11" fill="#6B5B7E" text-anchor="middle">
+    <text x="70" y="414">Day 1</text>
+    <text x="242" y="414">30</text>
+    <text x="414" y="414">60</text>
+    <text x="586" y="414">90</text>
+    <text x="758" y="414">120</text>
+    <text x="930" y="414">150</text>
+  </g>
+  <text x="500" y="440" text-anchor="middle" font-size="11" fill="#6B5B7E">Days from application to first participant recruitment</text>
+
+  <text x="930" y="470" text-anchor="end" font-size="9" font-style="italic" fill="#9D8FB0">Durations drawn to scale; no calendar dates implied.</text>
+</svg>

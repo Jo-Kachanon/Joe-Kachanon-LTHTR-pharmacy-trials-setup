@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 560" font-family="Inter, Arial, sans-serif">
+  <rect x="0" y="0" width="1180" height="560" fill="#FFFFFF"></rect>
+
+  <defs>
+    <marker id="arw" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B5B7E"></path>
+    </marker>
+  </defs>
+
+  <rect x="40" y="232" width="176" height="96" rx="10" fill="#F6F4F9" stroke="#C7BFD4" stroke-width="1.5"></rect>
+  <text x="128" y="257" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1.1" fill="#50017D">START OF THE WINDOW</text>
+  <text x="128" y="280" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1F0E33">Regulatory approval</text>
+  <text x="128" y="296" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1F0E33">or site selection</text>
+  <text x="128" y="314" text-anchor="middle" font-size="10" fill="#6B5B7E">whichever is later</text>
+
+  <rect x="256" y="232" width="176" height="96" rx="10" fill="#F6F4F9" stroke="#C7BFD4" stroke-width="1.5"></rect>
+  <text x="344" y="270" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1F0E33">Research and Innovation</text>
+  <text x="344" y="287" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1F0E33">releases the study</text>
+  <text x="344" y="307" text-anchor="middle" font-size="10" fill="#6B5B7E">pharmacy is notified</text>
+
+  <rect x="472" y="232" width="196" height="96" rx="10" fill="#F6F4F9" stroke="#C7BFD4" stroke-width="1.5"></rect>
+  <text x="570" y="258" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1.1" fill="#50017D">EVERY MEDICINAL TRIAL</text>
+  <text x="570" y="282" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="600" fill="#1F0E33">Clinical trials pharmacy</text>
+  <text x="570" y="299" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="12" font-weight="600" fill="#1F0E33">team reviews the trial</text>
+
+  <rect x="700" y="116" width="214" height="100" rx="10" fill="#FAF8FC" stroke="#6B5B7E" stroke-width="1.5" stroke-dasharray="7 5"></rect>
+  <text x="807" y="150" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1F0E33">Aseptic Services</text>
+  <text x="807" y="173" text-anchor="middle" font-size="10" fill="#6B5B7E">Where sterile preparation</text>
+  <text x="807" y="187" text-anchor="middle" font-size="10" fill="#6B5B7E">of the medicine is required</text>
+
+  <rect x="700" y="344" width="214" height="100" rx="10" fill="#FAF8FC" stroke="#6B5B7E" stroke-width="1.5" stroke-dasharray="7 5"></rect>
+  <text x="807" y="378" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1F0E33">Oncology Pharmacy</text>
+  <text x="807" y="401" text-anchor="middle" font-size="10" fill="#6B5B7E">Where an electronic prescribing</text>
+  <text x="807" y="415" text-anchor="middle" font-size="10" fill="#6B5B7E">template is required</text>
+
+  <rect x="984" y="232" width="160" height="96" rx="10" fill="#50017D"></rect>
+  <text x="1064" y="262" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF">Pharmacy green light</text>
+  <text x="1064" y="284" text-anchor="middle" font-size="9.3" fill="#EAD9F6">Issued only when every</text>
+  <text x="1064" y="297" text-anchor="middle" font-size="9.3" fill="#EAD9F6">required team has finished;</text>
+  <text x="1064" y="310" text-anchor="middle" font-size="9.3" fill="#EAD9F6">it waits for the last to finish</text>
+
+  <rect x="984" y="372" width="160" height="80" rx="10" fill="#F6F4F9" stroke="#C7BFD4" stroke-width="1.5"></rect>
+  <text x="1064" y="406" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#1F0E33">Site opens</text>
+  <text x="1064" y="426" text-anchor="middle" font-size="10" fill="#6B5B7E">set-up complete</text>
+
+  <line x1="216" y1="280" x2="250" y2="280" stroke="#6B5B7E" stroke-width="1.6" marker-end="url(#arw)"></line>
+  <line x1="432" y1="280" x2="466" y2="280" stroke="#6B5B7E" stroke-width="1.6" marker-end="url(#arw)"></line>
+
+  <line x1="668" y1="280" x2="978" y2="280" stroke="#6B5B7E" stroke-width="1.6" marker-end="url(#arw)"></line>
+  <text x="820" y="272" text-anchor="middle" font-size="9" font-style="italic" fill="#9D8FB0">always</text>
+
+  <path d="M668,262 L698,190" fill="none" stroke="#6B5B7E" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#arw)"></path>
+  <path d="M668,298 L698,372" fill="none" stroke="#6B5B7E" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#arw)"></path>
+  <path d="M878,216 L978,254" fill="none" stroke="#6B5B7E" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#arw)"></path>
+  <path d="M878,344 L978,306" fill="none" stroke="#6B5B7E" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#arw)"></path>
+
+  <line x1="1064" y1="328" x2="1064" y2="368" stroke="#6B5B7E" stroke-width="1.6" marker-end="url(#arw)"></line>
+
+  <rect x="40" y="494" width="26" height="16" rx="3" fill="#F6F4F9" stroke="#C7BFD4" stroke-width="1.5"></rect>
+  <text x="74" y="507" font-size="10.5" fill="#1F0E33">Solid: every medicinal trial</text>
+  <rect x="300" y="494" width="26" height="16" rx="3" fill="#FAF8FC" stroke="#6B5B7E" stroke-width="1.5" stroke-dasharray="7 5"></rect>
+  <text x="334" y="507" font-size="10.5" fill="#1F0E33">Dashed: only where the trial requires it</text>
+</svg>

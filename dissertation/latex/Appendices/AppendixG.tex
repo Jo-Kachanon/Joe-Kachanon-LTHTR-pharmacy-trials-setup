@@ -1,0 +1,38 @@
+% Appendix G. Source: Appendix 5.B of Dissertation/Chapter5_Results.md.
+
+\chapter{Targeted Against Untargeted Preparation}
+\label{app:targeted}
+\lhead{Appendix \thechapter. \emph{Targeted Against Untargeted Preparation}}
+
+Section~\ref{sec:levers} reports that preparation aimed only at high-burden studies reaches almost as many dates for about half the earlier notification. This is the sweep behind that sentence.
+
+The regime matches Table~\ref{tab:settings}: the strict anchor rule, the demonstrated floors, the high-burden overlay at 63 days, six slots, and the same twenty-five decision points. Targeted preparation grants the lead only to committed trials in burden band 5 or 6. Spread preparation grants it across the queue.
+
+\begin{table}[htbp]
+  \centering
+  \caption{What each lead reaches, targeted against spread}
+  \label{tab:targeted}
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}lrrrrrrrr@{}}
+    \toprule
+    & \multicolumn{4}{c}{\textbf{Targeted}} & \multicolumn{4}{c}{\textbf{Spread}} \\
+    \cmidrule(lr){2-5}\cmidrule(l){6-9}
+    \textbf{Lead} & \textbf{$\geq 1$} & \textbf{$\geq 2$} & \textbf{Best} & \textbf{R\&I days}
+                  & \textbf{$\geq 1$} & \textbf{$\geq 2$} & \textbf{Best} & \textbf{R\&I days} \\
+    \midrule
+    0 days  & 9 of 25  & 0 & 1 & 0     & 9 of 25  & 0  & 1 & 0 \\
+    7 days  & 10 of 25 & 0 & 1 & 147   & 11 of 25 & 0  & 1 & 469 \\
+    14 days & 11 of 25 & 0 & 1 & 294   & 12 of 25 & 2  & 2 & 980 \\
+    21 days & 12 of 25 & 0 & 1 & 441   & 14 of 25 & 4  & 2 & 1,407 \\
+    35 days & 14 of 25 & 1 & 2 & 735   & 18 of 25 & 7  & 3 & 2,450 \\
+    60 days & 16 of 25 & 2 & 2 & 1,260 & 20 of 25 & 12 & 3 & 4,020 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Read the table across equal counts rather than equal leads. Twelve dates cost 441 trial-days of earlier notification when the lead is targeted and 980 when it is spread; fourteen dates cost 735 against 1,407. Roughly half the R\&I effort reaches the same number of dates.
+
+The ceiling is what targeting gives up. It never reaches three trials on time, and reaches two at only two dates, against three and twelve when the lead is spread. Not every rescuable trial is a heavy one, so a lead confined to bands 5 and 6 cannot reach the trials that the spread lead rescues.
+
+Every figure comes from \texttt{analyse\_burden\_and\_preparation}. Its untargeted arm reproduces the preparation row of Table~\ref{tab:settings} exactly, 20 of 25 dates at a 60-day lead, which is what makes the two arms comparable.

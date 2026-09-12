@@ -1,0 +1,38 @@
+% All values on this page come from the details block at the top of main.tex.
+% Do not hardcode names here -- edit main.tex instead.
+
+\begin{titlepage}
+\begin{center}
+
+% Drop your university logo in as Figures/logo.png (or logo.jpg) and it appears
+% automatically. With no logo file present the page still compiles cleanly.
+\IfFileExists{Figures/logo.png}{%
+  \begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.24\textwidth]{logo.png}
+  \end{figure}
+}{%
+  \IfFileExists{Figures/logo.jpg}{%
+    \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.24\textwidth]{logo.jpg}
+    \end{figure}
+  }{}%
+}
+
+\textsc{\LARGE \univname}\\[0.7cm]
+\HRule \\[0.4cm]
+{\huge \bfseries \ttitle}\\[0.4cm]
+\HRule \\[0.7cm]
+{\LARGE \bfseries \authornames}\\[0.4cm]
+{\LARGE \studentid}\\[1cm]
+{\large \bfseries Supervisor}\\[0.4cm]
+{\large \bfseries \supname}\\[1cm]
+\large \textit{A thesis submitted in fulfilment of the requirements\\ for the degree of \degreename}\\[0.3cm]
+\textit{in the}\\[0.4cm]
+\facname \\
+\deptname\\[1cm]
+{\large \subdate}\\[4cm]
+\vfill
+\end{center}
+\end{titlepage}

@@ -1,0 +1,70 @@
+% Chapter 6, Conclusion.
+% Generated from Dissertation/Chapter6_Conclusion.md by tools/md2tex.py.
+%% The draft-status line, the provenance notes and the [edit] markers in the
+%% Markdown source are not part of the submitted text and are absent here.
+%% Markdown is the source. Regenerate this file when it changes; do not hand-edit.
+
+\chapter{Conclusion}
+\label{ch:conclusion}
+\lhead{Chapter 6. \emph{Conclusion}}
+
+\section{Answers to the research questions}
+\label{sec:answers}
+
+Table~\ref{tab:answers} answers the critical question and its three sub-questions, and cites the evidence behind each; their full wording is in Section~\ref{sec:questions} and Table~\ref{tab:questions}.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Answers to the critical question and sub-questions SQ1 to SQ3*}
+  \label{tab:answers}
+  \begin{tabularx}{\textwidth}{@{}LL@{}}
+    \toprule
+    \textbf{} & \textbf{Answer} \\
+    \midrule
+    RQ & Four distinct trials is the maximum achievable on time across the observed decision points. The constraint is time remaining when trials reach pharmacy, not nominal capacity: high-burden set-up can consume the full 60-day window before hand-over or approval delay is considered. Preparation is therefore the only tested lever that raises the on-time ceiling, because it creates time before the clock starts. Reducing hand-over and pharmacy-queue delay improves the position of trials near the threshold, while increasing nominal capacity reduces lateness but does not create further on-time completions (Sections~\ref{sec:whythese} to~\ref{sec:levers}--5.6; Table~\ref{tab:settings}). \\
+    \addlinespace
+    SQ1 & Across the 25 observed decision points, only four distinct trials could be committed and completed on time within the cycle commitment limit; these trials are identified in Table~\ref{tab:fourtrials5} (Sections~\ref{sec:realqueues} to~\ref{sec:whythese}). \\
+    \addlinespace
+    SQ2 & Neither the cycle commitment limit nor the approval queue is the primary constraint on the on-time count. Raising the cycle commitment limit increases the on-time count at none of the 25 decision points. The limit is a maximum, so the model leaves slots unused when additional commitments would create approval delay without improving on-time performance. The binding constraint is instead the time remaining when trials reach pharmacy: extra capacity reduces lateness but does not create further on-time completions. Approval time determines usable capacity, not the on-time ceiling (Sections~\ref{sec:levers} to~\ref{sec:tradeoff}; Appendix 5.C). \\
+    \addlinespace
+    SQ3 & The rule improves on the arrival-order comparator only when capacity is tight: at one or two set-ups per month it can select a better committed portfolio, but from three onwards both approaches select the same trials. It therefore allocates scarce capacity rather than increasing overall performance (Section~\ref{sec:realqueues}). Its on-time advantage is not robust across simulated portfolios. It appears only at pharmacy's demonstrated duration floors, and within that regime is stronger for early arrivals and less aseptic pathway mixes. Across the demonstrated-floors regime, the rule is better in 36 per cent of runs and equal in the remainder by construction (Appendix 5.A). \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+The observed ceiling is set by usable time, not by nominal commitment capacity.
+
+\section{Contribution and comparison with published work}
+\label{sec:contrib6}
+
+The principal contribution is the translation of LTHTR's pharmacy set-up process, existing capacity, pathways and shared approval queue into an optimisation model calibrated on the trust's records. The repeatable model makes commitment decisions explicit, compares feasible portfolios and alternative scenarios before work is committed, and assesses portfolio-level on-time performance while distinguishing nominal from usable capacity. A companion user-interface mock-up makes the model operationally interpretable: users can progressively enter trial information, identify the 60-day clock start and pathway burden, consider preparation before the clock starts, and review transparent monthly commitment recommendations.
+
+The findings refine the practical implication of the selection literature: selection can improve the allocation of commitments and reduce lateness across the queue, but it cannot recover time lost before pharmacy receives a trial. Earlier notification and preparation therefore create the conditions in which selection can improve on-time performance (\citealp{SlotnickMorton2007OrderAcceptance}; \citealp{Munoz2018ProposalSelection}; \citealp{Qi2022EquitableEnrolment}; Sections~\ref{sec:realqueues} to~\ref{sec:levers}--5.6). Pharmacy is the first module of a wider trial set-up portfolio; comparable process, duration and capacity data from other departments would allow interdependent workstreams to be assessed jointly.
+
+\section{Limitations}
+\label{sec:limitations}
+
+The comparison with arrival order is limited by the comparator, not by the optimisation result. The comparator is a stated rule, not a record of routine practice, which already expedites some important studies. Any reported advantage is therefore an upper bound on the benefit over current practice and limits SQ3 alone. Similarly, agreement between the model and the four trials that achieved the target is retrospective consistency rather than prospective validation (Section~\ref{sec:realqueues}; Appendix 5.A).
+
+The four-trial ceiling is a conditional planning estimate, with its fourth on-time place particularly sensitive to the high-burden duration assumption (Section~\ref{sec:delivery}). The analysis rests on a small case-study base, estimated timing data, uncertain set-up durations and an assumed approval-time input. Sensitivity and simulation analyses test these uncertainties, but cannot independently validate the capacity ceiling or the reliability of the preparation result. In particular, holding approval delay at its expected value understates total operational uncertainty (Sections~\ref{sec:parameters} to~\ref{sec:experiments}, 5.3--5.4; Appendices 5.A and 5.C).
+
+Preparation is not capacity-free: the base model does not charge pre-window work against the commitment limit, so it may overstate its benefit. The sensitivity analysis in Appendix 5.E shows that preparation still increases the number of decision points achieving at least one on-time completion across the tested capacity range, although the three-trial result disappears at two set-ups. Preparation is therefore a capacity-consuming intervention, not a free source of additional time.
+
+Finally, the model selects trials for commitment but does not sequence work after commitment. The evidence therefore concerns portfolio selection only and does not establish whether a sequencing intervention could improve performance (Section~\ref{sec:notdecided}).
+
+\section{Implications for practice and for further research}
+\label{sec:implications}
+
+The results imply four immediate actions for LTHTR: record hands-on approval time to calibrate the approval queue; flag aseptic studies at notification for targeted early preparation; plan to a reliable lower outcome rather than the deterministic maximum; and use selection to support, rather than substitute for, earlier preparation and hand-over (Sections~\ref{sec:realqueues} to~\ref{sec:delivery}--5.5).
+
+Four research directions follow from the limitations above:
+
+\begin{itemize}
+  \item Extend the model to integrated selection and sequencing, which the present analysis cannot address.
+  \item Measure pathway-specific work, approval service times and rework, so that resource use can be modelled in staff time rather than commitment counts.
+  \item Optimise early preparation under finite capacity, including the activity it displaces.
+  \item Prospectively evaluate the model's recommendations against observed practice, under demand growth, changing pathway mix and interdependent cross-service workflows.
+\end{itemize}
+
+---
+

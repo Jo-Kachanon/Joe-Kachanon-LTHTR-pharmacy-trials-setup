@@ -1,0 +1,164 @@
+% Appendix D. Source: Appendix 4.C of Dissertation/Chapter4_Methodology.md.
+
+\chapter{What the 52 Automated Tests Check}
+\label{app:tests}
+\lhead{Appendix D. \emph{What the 52 Automated Tests Check}}
+
+Section~\ref{sec:verification} reports 52 tests. This appendix says what each one checks, so the count can be verified and any single check found. Every test runs whenever the code changes, and a failing test stops the change rather than reporting the problem afterwards.
+
+\section{The selection model, tests 1 to 35}
+\label{sec:testsmodel}
+
+The model of Chapter~\ref{ch:problem}, and the two refinements of Section~\ref{sec:parameters}.
+
+\begin{longtable}{@{}rp{0.86\textwidth}@{}}
+  \caption{Tests 1 to 13: the selection model}
+  \label{tab:tests1}\\
+  \toprule
+  & \textbf{The test checks that} \\
+  \midrule
+  \endfirsthead
+  \toprule
+  & \textbf{The test checks that} \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endfoot
+  1  & The demonstration instance loads with 16 trials covering all four pathways \\
+  2  & The demonstration durations are short enough to show the on-time mechanism, which the measured durations are not \\
+  3  & The solver finds the same plan as checking every possible plan one at a time \\
+  4  & The solver agrees with the simpler ranking rule wherever that rule is known to be correct \\
+  5  & No plan commits more trials than the limit allows \\
+  6  & The model commits fewer trials than the limit when an extra trial would cost a rescue \\
+  7  & Ranking on lateness alone rescues no trial, which is why on-time is ranked first \\
+  8  & Putting on-time first never improves lateness; it can only cost lateness \\
+  9  & A study scoring below the value floor is closed rather than left in the queue \\
+  10 & An empty queue returns a plan rather than an error \\
+  11 & The capacity check made before solving agrees with what the solver returns \\
+  12 & A trial that cannot be planned is returned marked as blocked, not quietly dropped \\
+  13 & Solving through the planner interface gives the same plan as using the model directly \\
+\end{longtable}
+
+\begin{longtable}{@{}rp{0.86\textwidth}@{}}
+  \caption{Tests 14 to 17: the withdrawn trade setting}
+  \label{tab:tests2}\\
+  \toprule
+  & \textbf{The test checks that} \\
+  \midrule
+  \endfirsthead
+  \toprule
+  & \textbf{The test checks that} \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endfoot
+  14 & The withdrawn setting has been removed from the model, not merely set to zero \\
+  15 & A request still using it is refused rather than silently given an unchanged plan \\
+  16 & Switching the value objective on never costs an on-time trial \\
+  17 & Portfolio value rises with the commitment limit, which is why trading a trial away never pays \\
+\end{longtable}
+
+\begin{longtable}{@{}rp{0.86\textwidth}@{}}
+  \caption{Tests 18 to 23: segment B, the days lost before a trial reaches pharmacy}
+  \label{tab:tests3}\\
+  \toprule
+  & \textbf{The test checks that} \\
+  \midrule
+  \endfirsthead
+  \toprule
+  & \textbf{The test checks that} \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endfoot
+  18 & A trial already in pharmacy's queue does not lose the same days twice \\
+  19 & A trial not yet handed over loses the days before hand-over \\
+  20 & A trial R\&I still holds is planned on the median hand-over and marked as assumed \\
+  21 & A trial with no usable dates is blocked rather than given an invented window \\
+  22 & Subtracting the hand-over can cost a trial its rescue, which is the point of the correction \\
+  23 & An assumed hand-over is always reported as assumed, never as a recorded date \\
+\end{longtable}
+
+\begin{longtable}{@{}rp{0.86\textwidth}@{}}
+  \caption{Tests 24 to 35: segment A, the preparation credit}
+  \label{tab:tests4}\\
+  \toprule
+  & \textbf{The test checks that} \\
+  \midrule
+  \endfirsthead
+  \toprule
+  & \textbf{The test checks that} \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endfoot
+  24 & With no credit set, every plan matches the plan produced before the credit existed \\
+  25 & With both conditions met, the credit shortens the set-up \\
+  26 & Complexity alone earns nothing without the sponsor green light \\
+  27 & The green light alone earns nothing without complexity \\
+  28 & A Phase 1 study earns the credit without needing aseptic work \\
+  29 & Every input to the credit comes from the data request; none is invented \\
+  30 & The planner can add a study the rule would miss \\
+  31 & The planner can withhold the credit from a study the rule would give it to \\
+  32 & The planner cannot waive the sponsor green light \\
+  33 & The credit never shortens a study below one day \\
+  34 & A negative credit is refused \\
+  35 & The credit can turn a missed deadline into a rescue \\
+\end{longtable}
+
+\section{The robustness experiment, tests 36 to 40}
+\label{sec:testsrobust}
+
+Tests 36 and 37 are the two hand-worked checks of Section~\ref{sec:verification}.
+
+\begin{longtable}{@{}rp{0.86\textwidth}@{}}
+  \caption{Tests 36 to 40: the robustness experiment}
+  \label{tab:tests5}\\
+  \toprule
+  & \textbf{The test checks that} \\
+  \midrule
+  \endfirsthead
+  \toprule
+  & \textbf{The test checks that} \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endfoot
+  36 & The four-trial instance of Appendix~\ref{app:notation} gives the same answer worked by hand and computed by the model \\
+  37 & The lateness calculation matches equation~(\ref{eq:lateness}) worked by hand \\
+  38 & A scenario regenerates exactly from its seed \\
+  39 & The comparator commits the longest-waiting trials, as Section~\ref{sec:comparison} describes \\
+  40 & Checking every plan one at a time and solving directly return the same plan \\
+\end{longtable}
+
+\section{The plan-level uncertainty run, tests 41 to 52}
+\label{sec:testsuncertainty}
+
+Tests 41 to 43 fix the run's agreement with the plan it qualifies.
+
+\begin{longtable}{@{}rp{0.86\textwidth}@{}}
+  \caption{Tests 41 to 52: the plan-level uncertainty run}
+  \label{tab:tests6}\\
+  \toprule
+  & \textbf{The test checks that} \\
+  \midrule
+  \endfirsthead
+  \toprule
+  & \textbf{The test checks that} \\
+  \midrule
+  \endhead
+  \bottomrule
+  \endfoot
+  41 & With no variation in duration, the run returns the planning model's on-time count exactly \\
+  42 & With variation, the promised count is not always achieved, which is the point of the run \\
+  43 & Only the set-up spread widens the drawn durations; the approval-time figure cannot \\
+  44 & The reported distribution adds to one and never exceeds the number of trials committed \\
+  45 & The pessimistic figure never reads higher than the average \\
+  46 & The trial most likely to miss its deadline is reported first \\
+  47 & A trial the plan cannot rescue is never shown as rescued \\
+  48 & A larger plan carries a longer approval wait \\
+  49 & A run repeats exactly from the same seed \\
+  50 & A different seed gives a different result \\
+  51 & An empty plan is refused \\
+  52 & A run must have at least one repetition \\
+\end{longtable}

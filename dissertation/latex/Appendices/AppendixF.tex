@@ -1,0 +1,60 @@
+% Appendix F. Source: Appendix 5.A of Dissertation/Chapter5_Results.md.
+
+\chapter{The Robustness Sweep}
+\label{app:sweep}
+\lhead{Appendix \thechapter. \emph{The Robustness Sweep}}
+
+The sweep tests one narrow question: does the selection rule's advantage survive when arrival timing, pathway mix and set-up duration are varied? It does not test preparation or the hand-over correction, and it runs on generated portfolios rather than on the trust's own queues.
+
+\begin{table}[htbp]
+  \centering
+  \caption{The scenario grid}
+  \label{tab:grid}
+  \begin{tabularx}{\textwidth}{@{}P{2.9cm}P{4.4cm}L@{}}
+    \toprule
+    \textbf{Axis} & \textbf{Values} & \textbf{Grounding} \\
+    \midrule
+    Arrival timing & early, typical, late &
+      Days remaining at the planning date, spanning the tracker's observed spread \\
+    \addlinespace
+    Aseptic share & 0.4, 0.6, 0.8 &
+      Centred on the trust's own 60\% figure \\
+    \addlinespace
+    Prescription share & 0.2, 0.4 &
+      No trust figure exists, so it is varied rather than assumed \\
+    \addlinespace
+    Duration regime &
+      calibrated at 0.8, 1.0 and 1.2 times the case-study medians; the
+      Appendix 4.H floors; the pooled 62-day figure &
+      Current performance, demonstrated performance, and the achievable pooled
+      quantile \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+90 cells, 100 portfolios each, 9,000 in total, one fixed seed per cell.
+
+\begin{table}[htbp]
+  \centering
+  \caption{On-time wins against the arrival-order rule, by duration regime}
+  \label{tab:sweepwins}
+  \begin{tabular}{@{}lrrr@{}}
+    \toprule
+    \textbf{Regime} & \textbf{Wins} & \textbf{Draws} & \textbf{Win rate} \\
+    \midrule
+    Calibrated, 0.8$\times$ & 0 & 1,800 & 0\% \\
+    Calibrated             & 0 & 1,800 & 0\% \\
+    Calibrated, 1.2$\times$ & 0 & 1,800 & 0\% \\
+    \textbf{Floors}        & \textbf{640} & \textbf{1,800} & \textbf{36\%} \\
+    Pooled 62 days         & 0 & 1,800 & 0\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The finding is that the rule has no advantage of its own. Four of the five duration regimes return exactly zero wins in 1,800 draws each: current performance, current performance 20\% faster, current performance 20\% slower, and the pooled 62-day figure. The rule gains something in one regime only, the durations pharmacy has already demonstrated, and there it wins 36\% of the time. An advantage that appears in one of five regimes and vanishes in the other four is a property of the queue, not of the ordering.
+
+The other two axes say which queues those are. The rule wins in 75\% of draws when trials arrive early, 32\% at the typical arrival time and never in any of the 600 draws where they arrive late, which is the same result Section~\ref{sec:whythese} reads off the real queues: a trial that reaches pharmacy after most of its window has gone cannot be recovered by any ordering. Its wins also fall from 45\% to 24\% as the aseptic share rises from 0.4 to 0.8. The trust's own mix of roughly 60\% aseptic sits between them, at 38\%, and the direction of travel is towards the heavier end.
+
+Three things follow. First, selection is the third lever rather than the first. A service that adopts this rule without changing durations gains nothing, and the four zero rows are what that looks like measured; Section~\ref{sec:levers} reaches the same ordering from the real queues by finding preparation and the two delays ahead of any scheduling change. Second, the rule is a rationing device rather than an improvement. Section~\ref{sec:realqueues} finds its advantage on the real queues at one and two set-ups a month and gone from three, so it earns its keep exactly where capacity is tightest and stops mattering once capacity is not, which is the opposite of how a scheduling tool is usually sold. Third, each win is bought. The 640 wins cost 24.3 weighted days of lateness elsewhere apiece, so the rule trades delay across the queue for a threshold rather than removing delay, which is the Section~\ref{sec:tradeoff} trade-off appearing again on generated data.
+
+\textbf{Three limits.} The model never loses, which is by construction rather than a finding: it attains the maximum achievable on-time count, so a loss is impossible. The 36\% is therefore 36\% better and 64\% identical, not a rule that is worse the rest of the time. The generator draws studies already queued, so the sweep cannot exercise preparation and understates it throughout. And the comparator, committing the longest-waiting study first, is more mechanical than real practice, which already accelerates studies judged important; any advantage shown here is therefore an upper bound.

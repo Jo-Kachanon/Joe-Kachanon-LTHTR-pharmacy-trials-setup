@@ -1,0 +1,65 @@
+world,budget,p1_on_time,p2_weighted_lateness_days,burden_spent,committed
+"standards, no preparation",unconstrained,0,1746.2,10.7,SYNTH-01;SYNTH-03;SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,0,1749.2,9.83,SYNTH-03;SYNTH-06;SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,0,1751.3,9.09,SYNTH-03;SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,0,1755.5,8.96,SYNTH-06;SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-13;SYNTH-16
+"standards, no preparation",unconstrained,0,1756.1,8.35,SYNTH-03;SYNTH-08;SYNTH-10;SYNTH-11;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,0,1756.4,8.22,SYNTH-06;SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,0,1759.7,7.48,SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-11;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,0,1770.6,7.35,SYNTH-03;SYNTH-08;SYNTH-10;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,0,1772.1,7.22,SYNTH-06;SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,0,1774.2,6.48,SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,0,1779.0,5.74,SYNTH-08;SYNTH-10;SYNTH-11;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,0,1796.9,5.48,SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,0,1800.5,4.74,SYNTH-08;SYNTH-10;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,0,1807.7,4.0,SYNTH-08;SYNTH-11;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,0,1826.8,3.74,SYNTH-08;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,0,1832.8,3.0,SYNTH-08;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,0,1859.3,2.74,SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,0,1861.4,2.0,SYNTH-08;SYNTH-13
+"standards, no preparation",unconstrained,0,1895.1,1.0,SYNTH-13
+"standards, no preparation",unconstrained,0,1932.7,0,
+"standards, no preparation",unconstrained,1,1766.2,9.96,SYNTH-01;SYNTH-03;SYNTH-08;SYNTH-09;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,1,1767.7,9.09,SYNTH-03;SYNTH-07;SYNTH-08;SYNTH-09;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,1,1771.3,8.35,SYNTH-03;SYNTH-08;SYNTH-09;SYNTH-10;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,1,1772.8,8.22,SYNTH-06;SYNTH-07;SYNTH-08;SYNTH-09;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,1,1774.9,7.48,SYNTH-07;SYNTH-08;SYNTH-09;SYNTH-10;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,1,1779.7,6.74,SYNTH-08;SYNTH-09;SYNTH-10;SYNTH-11;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,1,1788.7,6.61,SYNTH-02;SYNTH-08;SYNTH-11;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,1,1791.7,6.48,SYNTH-07;SYNTH-08;SYNTH-09;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,1,1795.3,5.74,SYNTH-08;SYNTH-09;SYNTH-10;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,1,1802.5,5.0,SYNTH-08;SYNTH-09;SYNTH-11;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,1,1818.6,4.74,SYNTH-08;SYNTH-09;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,1,1824.6,4.0,SYNTH-08;SYNTH-09;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,1,1849.2,3.74,SYNTH-09;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,1,1851.3,3.0,SYNTH-08;SYNTH-09;SYNTH-13
+"standards, no preparation",unconstrained,1,1884.2,2.0,SYNTH-09;SYNTH-13
+"standards, no preparation",unconstrained,1,1920.9,1.0,SYNTH-09
+"standards, no preparation",unconstrained,2,1795.7,8.96,SYNTH-02;SYNTH-03;SYNTH-09;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,2,1797.8,8.22,SYNTH-02;SYNTH-03;SYNTH-08;SYNTH-09;SYNTH-13
+"standards, no preparation",unconstrained,2,1799.0,7.35,SYNTH-02;SYNTH-08;SYNTH-09;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,2,1805.0,6.61,SYNTH-02;SYNTH-08;SYNTH-09;SYNTH-12;SYNTH-13
+"standards, no preparation",unconstrained,2,1826.9,6.35,SYNTH-02;SYNTH-09;SYNTH-10;SYNTH-13
+"standards, no preparation",unconstrained,2,1829.0,5.61,SYNTH-02;SYNTH-08;SYNTH-09;SYNTH-13
+"standards, no preparation",unconstrained,2,1857.0,5.48,SYNTH-09;SYNTH-10;SYNTH-13;SYNTH-14
+"standards, no preparation",unconstrained,2,1859.1,4.74,SYNTH-08;SYNTH-09;SYNTH-13;SYNTH-14
+"standards, no preparation",unconstrained,2,1860.1,4.61,SYNTH-02;SYNTH-09;SYNTH-13
+"standards, no preparation",unconstrained,2,1889.7,3.74,SYNTH-09;SYNTH-13;SYNTH-14
+"standards, no preparation",unconstrained,2,1896.0,3.61,SYNTH-02;SYNTH-09
+"standards, no preparation",unconstrained,2,1925.3,2.74,SYNTH-09;SYNTH-14
+"standards, no preparation",unconstrained,3,1836.2,8.96,SYNTH-02;SYNTH-03;SYNTH-09;SYNTH-13;SYNTH-14
+"standards, no preparation",unconstrained,3,1837.4,8.09,SYNTH-02;SYNTH-09;SYNTH-10;SYNTH-13;SYNTH-14
+"standards, no preparation",unconstrained,3,1839.5,7.35,SYNTH-02;SYNTH-08;SYNTH-09;SYNTH-13;SYNTH-14
+"standards, no preparation",unconstrained,3,1867.4,6.35,SYNTH-02;SYNTH-09;SYNTH-13;SYNTH-14
+"standards, no preparation",unconstrained,3,1901.2,5.35,SYNTH-02;SYNTH-09;SYNTH-14
+"(a) medians, no preparation",unconstrained,0,2641.8,10.7,SYNTH-01;SYNTH-03;SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-13
+"(b) medians, targeted preparation",unconstrained,0,2456.1,10.7,SYNTH-01;SYNTH-03;SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-13
+"(b) medians, targeted preparation",unconstrained,1,2468.5,11.57,SYNTH-01;SYNTH-02;SYNTH-03;SYNTH-08;SYNTH-10;SYNTH-13
+"(c) standards, no preparation",unconstrained,0,1746.2,10.7,SYNTH-01;SYNTH-03;SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-13
+"(c) standards, no preparation",unconstrained,1,1766.2,9.96,SYNTH-01;SYNTH-03;SYNTH-08;SYNTH-09;SYNTH-10;SYNTH-13
+"(c) standards, no preparation",unconstrained,2,1795.7,8.96,SYNTH-02;SYNTH-03;SYNTH-09;SYNTH-10;SYNTH-13
+"(c) standards, no preparation",unconstrained,3,1836.2,8.96,SYNTH-02;SYNTH-03;SYNTH-09;SYNTH-13;SYNTH-14
+"(d) standards, targeted preparation",unconstrained,0,1696.0,10.7,SYNTH-01;SYNTH-03;SYNTH-07;SYNTH-08;SYNTH-10;SYNTH-13
+"(d) standards, targeted preparation",unconstrained,1,1708.4,11.57,SYNTH-01;SYNTH-02;SYNTH-03;SYNTH-08;SYNTH-10;SYNTH-13
+"(d) standards, targeted preparation",unconstrained,2,1728.7,11.57,SYNTH-01;SYNTH-02;SYNTH-03;SYNTH-09;SYNTH-10;SYNTH-13
+"(d) standards, targeted preparation",unconstrained,3,1768.3,10.7,SYNTH-02;SYNTH-03;SYNTH-09;SYNTH-10;SYNTH-13;SYNTH-14

@@ -1,0 +1,103 @@
+% Appendix A. Source: Appendix 3.A of Dissertation/Chapter3_Problem_Description.md.
+% Appendix material does not count towards the word limit.
+
+\chapter{Notation and Worked Instance}
+\label{app:notation}
+\lhead{Appendix A. \emph{Notation and Worked Instance}}
+
+\section{Notation}
+\label{sec:notation}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Notation used in the selection model of Chapter~\ref{ch:problem}}
+  \label{tab:notation}
+  \begin{tabularx}{\textwidth}{@{}lLl@{}}
+    \toprule
+    \textbf{Symbol} & \textbf{Meaning} & \textbf{Units} \\
+    \midrule
+    $i \in I$, $E$ & Trial awaiting pharmacy set-up; the eligible queue & n/a \\
+    $G$, $due_i$ & Set-up goal (60), due day $\max(\mathrm{approval}_i, \mathrm{selection}_i) + G$ & days \\
+    $p_i$ & Set-up duration of trial $i$, from its pathway & days \\
+    $\delta_i$ & Days remaining to $due_i$ at the planning date, negative once breached & days \\
+    $a_i$, $D$ & Days trial $i$ has waited; weight divisor (365) & days \\
+    $w_i$ & Claim weight, $1 + a_i / D$ & dimensionless \\
+    $c$ & Set-ups the service can commit in a cycle & trials \\
+    $L$ & Planning cycle length (30) & days \\
+    $g_n$ & Expected approval wait when $n$ trials are committed & days \\
+    $r_{in}$ & 1 if trial $i$ finishes inside its window at committed count $n$ & binary \\
+    $x_i$ & 1 if trial $i$ is committed & binary \\
+    $z_n$ & 1 if the plan commits exactly $n$ trials & binary \\
+    $\mathrm{onTime}_i$ & 1 if trial $i$ is committed and lands inside its window & binary \\
+    $d^+_i$ & Days by which trial $i$ finishes past $due_i$ & days \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\section{Worked instance: why on-time is a property of the plan}
+\label{sec:worked}
+
+This instance shows the mechanism Section~\ref{sec:queue} describes: the same trial can finish inside its window in a small plan and outside it in a large one, so committing more trials can leave fewer of them on time.
+
+\textbf{Durations here are illustrative, at 36 days.} The measured durations cannot be used for this purpose. Pooled across the tracker they run to about 95 days against a 60-day window, which puts every trial outside the target whatever the plan, and removes the question the instance is meant to show. The distinction the instance makes is therefore about the model's behaviour, not about LTHTR's current position.
+
+The expected approval wait, computed at the model's default settings, rises slowly and then sharply:
+
+\begin{table}[htbp]
+  \centering
+  \caption{Expected approval wait $g_n$ at each committed count}
+  \label{tab:waits}
+  \begin{tabular}{@{}lrrrrrrrrr@{}}
+    \toprule
+    Committed count $n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+    \midrule
+    Wait $g_n$, days & 0.20 & 0.46 & 0.79 & 1.25 & 1.91 & 2.96 & 4.86 & 9.39 & 32.32 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Four trials from the eligible queue, each needing 36 days of set-up, differ only in how much of their window remains:
+
+\begin{table}[htbp]
+  \centering
+  \caption{The four trials of the worked instance}
+  \label{tab:fourtrials}
+  \begin{tabular}{@{}lrl@{}}
+    \toprule
+    Trial & Days remaining $\delta_i$ & Slack over the 36-day set-up \\
+    \midrule
+    A & 50 & 14.0 \\
+    B & 44 & 8.0 \\
+    C & 38 & 2.0 \\
+    D & 12 & none, already short \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+A trial finishes inside its window when $\delta_i \ge p_i + g_n$. Applying that at each plan size gives the rescue matrix $r_{in}$ the model reads:
+
+\begin{table}[htbp]
+  \centering
+  \caption{The rescue matrix $r_{in}$ at each plan size}
+  \label{tab:rescue}
+  \begin{tabular}{@{}lccccccccc@{}}
+    \toprule
+    Plan size $n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+    \midrule
+    A rescueable & yes & yes & yes & yes & yes & yes & yes & yes & no \\
+    B rescueable & yes & yes & yes & yes & yes & yes & yes & no & no \\
+    C rescueable & yes & yes & yes & yes & yes & no & no & no & no \\
+    D rescueable & no & no & no & no & no & no & no & no & no \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Three things follow, and each answers something the chapter asserts.
+
+\textbf{Rescueability is not a property of the trial.} C survives at five committed and fails at six. Nothing about C changed; the queue it joined grew. This is why the model cannot decide trial by trial before the plan is chosen, and why the load selector $z_n$ of equation~(\ref{eq:loadselector}) exists.
+
+\textbf{Raising the commitment limit eventually makes performance worse.} Counting trials on time as the plan grows gives three at five committed, two at six and seven, one at eight, and none at nine. The on-time count peaks and then falls, because past the peak the queue costs more days than the tightest rescueable trial has left. That is the answer SQ2 asks for, and it is why ``take every slot you can get'' is the wrong reading of a capacity case.
+
+\textbf{A trial can be beyond help.} D has 12 days against a 36-day set-up and is outside its window at every plan size. It contributes nothing to P1 whatever the model does, which is why P2 exists: deferring D still lets its lateness grow, so the model is not free to ignore it.
+
+Trial labels here are illustrative. The waits are computed from \texttt{Experiments/optimiser/}\allowbreak\texttt{gate.py} at default settings; the durations and remaining days are chosen to make the mechanism visible.
