@@ -4,6 +4,9 @@ Exact implementation of the selection model described in the dissertation's meth
 chapter (`../../dissertation/Chapter4_Methodology.md`, section 4). It decides **which** trials
 pharmacy commits to set-up this cycle. It does not produce a timetable.
 
+See `MODEL.md` for a full explanation of the model — the inputs it derives, the queueing
+formula behind the approval wait, the formulation, and how to read its output.
+
 ## Run it
 
 Install dependencies from `requirements.txt`, then run from the `optimisation-model/`
@@ -41,7 +44,7 @@ bind on a larger caseload.
 | `data.py` | `Case`, `PlanningCase`, and the Layer 1 date arithmetic |
 | `loaders.py` | The 16-trial demonstration instance and the cleaned tracker CSV |
 | `gate.py` | The approval-signature queue, and the rescue table it produces |
-| `model.py` | The Gurobi build and the lexicographic solve |
+| `model.py` | The Gurobi build and the lexicographic solve. See `MODEL.md` |
 | `diagnostics.py` | The pre-solve P1 ceiling and the post-solve report |
 | `service.py` | JSON in, JSON out, in the planner's own field names |
 | `cli.py` | Command line entry point |
